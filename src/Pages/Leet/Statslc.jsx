@@ -1148,7 +1148,7 @@ function Statslc(props) {
         <h3>Latest Submission - </h3>
         <ul className='ul-submissions'>
           {submission.recentSubmissions.map(e => {
-            if (e.statusDisplay == "Accepted") {
+            if (e.statusDisplay === "Accepted") {
               return <li>{e.title} <span>{e.lang}</span></li>
             }
           })}
