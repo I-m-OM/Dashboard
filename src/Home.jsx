@@ -43,6 +43,23 @@ import { NavLink } from "react-router-dom";
       margin-top: 5rem;
       text-align: center;
     }
+
+    @media only screen and (max-width: 700px) {
+    
+      .button-container {
+        gap: 2rem;
+        display: block;
+      }
+
+      form {
+
+        input {
+          width: 80%;
+          margin: auto;
+          height: 3rem;
+        }
+      }
+    }
   `
 
 function Home() {

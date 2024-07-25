@@ -89,55 +89,7 @@ import Loading from '../comp/Loading'
 
         .left-child {
           color: #eee;
-          height: 100vh;
-          background: rgba(0,0,0,0.7);
-
-          .container {
-            position: relative;
-            top: 0;
-          }
-
-          img {
-            width: 50%;
-            margin: 4rem 25% 0 25%;
-            border-radius: 50%;
-          }
-
-          h1 {
-            color: #eca72d;
-            text-align: center;
-            text-transform: uppercase;
-          }
-
-          ul {
-            margin: auto;
-            padding: 0;
-            width: 70%;
-            list-style: none;
-            list-spacing: 1rem;
-          
-            li {
-              margin: 1rem 0 0 0;
-              padding: 0;
-              font: 500 0.8rem arial;
-              letter-spacing: 0.15rem;
-              text-align: center;
-
-              .links {
-                font-size: 1.3rem;
-                letter-spacing: 1rem;
-                text-decoration: none;
-                cursor: pointer;
-
-                a:link, a:visited {
-                  color: #eee;
-                }
-
-                a:active, a:hover {
-                  color: #ccc;
-                }
-              }
-            }
+          height: 55rem;
           }
         }
       }

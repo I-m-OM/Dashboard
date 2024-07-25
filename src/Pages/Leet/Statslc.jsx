@@ -20,12 +20,15 @@ const Stat = styled.div`
       display: grid;
       width: 90%;
       margin: auto;
+      padding: 0;
       gap: 1rem;
 
       .graph {
+        padding: 0;
         width: 100%;
-        height: 20rem;
+        aspect-ratio: 16/16;
         display: flex;
+        justify-content: center;
         align-items: center;
         background: rgba(255, 255, 255, 0.8);
         border-radius: 1rem;
@@ -88,8 +91,17 @@ const Stat = styled.div`
     .contest {
       grid-template-columns: 2fr 1fr;
     }
+  }
+    
+  @media only screen and (max-width: 1000px) {
 
-    @media only screen and (max-width: 1000px) {
+    .container {
+      width: 95%;
+
+      .grid {
+        width: 95%;
+      }
+
       .problem {
         grid-template-columns: 1fr;
       }
@@ -98,6 +110,7 @@ const Stat = styled.div`
         grid-template-columns: 1fr;
       }
     }
+
   }
 `
 
@@ -863,7 +876,7 @@ function Statslc(props) {
   });
 
   const today = new Date();
-  const prior = today - 31536000000;
+  const prior = today - 31536000000/2;
 
   const obj = submission.submissionCalendar;
   const arr = []
@@ -934,11 +947,15 @@ function Statslc(props) {
             <Chart
               options={{
                 chart: {
-                  id: "basic-bar",
                   redrawOnParentResize: true,
+                  redrawOnWindowResize: true,
                 },
                 xaxis: {
                   categories: ["Easy", "Mediun", "Hard"]
+                },
+                title: {
+                  text: 'Problems -',
+                  align: 'left'
                 },
                 theme: {
                   monochrome: {
@@ -951,8 +968,7 @@ function Statslc(props) {
               }}
               series={[{name: "Attempted", data: [solve.totalSubmissionNum[1].count, solve.totalSubmissionNum[2].count, solve.totalSubmissionNum[3].count],}, {name: "Solved", data: [solve.acSubmissionNum[1].count, solve.acSubmissionNum[2].count, solve.acSubmissionNum[3].count],}]}
               type="bar"
-              width="130%"
-              height="100%"
+              width="100%"
             />
           </div>
             
@@ -960,10 +976,18 @@ function Statslc(props) {
             
             <Chart
               options={{
+                chart: {
+                  redrawOnParentResize: true,
+                  redrawOnWindowResize: true,
+                },
                 labels: lang.languageProblemCount.map((e) => e.languageName),
                 stroke: {
                   // show: false,
                   width:1
+                },
+                title: {
+                  text: 'Langs -',
+                  align: 'left'
                 },
                 theme: {
                   monochrome: {
@@ -976,7 +1000,7 @@ function Statslc(props) {
               }}
               series={lang.languageProblemCount.map((e) => e.problemsSolved)}
               type="donut"
-              width="130%"
+              width="100%"
             />
           </div>
         </div>
@@ -988,13 +1012,30 @@ function Statslc(props) {
           <div className="graph">
             <Chart
               options={{
-                labels: skill.tagProblemCounts.advanced.map((e) => e.tagName),
+                chart: {
+                  redrawOnParentResize: true,
+                  redrawOnWindowResize: true,
+                },
+                labels: skill.tagProblemCounts.advanced.map((e) => {
+                  if (e.tagName.length > 10) { 
+                    if (e.tagName.indexOf(" ") === -1) {
+                      return e.tagName.substr(0, 10);
+                    } else {
+                      return e.tagName.trim().split(' ').map(c => c.substr(0, 4)).join(' ')
+                    }
+                  }
+                  else return e.tagName
+                }),
                 dataLabels: {
                   enabled: false
                 },
                 stroke: {
                   // show: false,
                   width:1
+                },
+                title: {
+                  text: 'Advance -',
+                  align: 'left'
                 },
                 theme: {
                   monochrome: {
@@ -1007,19 +1048,36 @@ function Statslc(props) {
               }}
               series={skill.tagProblemCounts.advanced.map((e) => e.problemsSolved)}
               type="pie"
-              width="130%"
+              width="100%"
             />
           </div>
           <div className="graph">
             <Chart
               options={{
-                labels: skill.tagProblemCounts.intermediate.map((e) => e.tagName),
+                chart: {
+                  redrawOnParentResize: true,
+                  redrawOnWindowResize: true,
+                },
+                labels: skill.tagProblemCounts.intermediate.map((e) => {
+                  if (e.tagName.length > 10) { 
+                    if (e.tagName.indexOf(" ") === -1) {
+                      return e.tagName.substr(0, 12);
+                    } else {
+                      return e.tagName.trim().split(' ').map(c => c.substr(0, 6)).join(' ')
+                    }
+                  }
+                  else return e.tagName
+                }),
                 dataLabels: {
                   enabled: false
                 },
                 stroke: {
                   // show: false,
                   width:1
+                },
+                title: {
+                  text: 'Intermediate -',
+                  align: 'left'
                 },
                 theme: {
                   monochrome: {
@@ -1032,19 +1090,36 @@ function Statslc(props) {
               }}
               series={skill.tagProblemCounts.intermediate.map((e) => e.problemsSolved)}
               type="pie"
-              width="130%"
+              width="100%"
             />
           </div>
           <div className="graph">
             <Chart
               options={{
-                labels: skill.tagProblemCounts.fundamental.map((e) => e.tagName),
+                chart: {
+                  redrawOnParentResize: true,
+                  redrawOnWindowResize: true,
+                },
+                labels: skill.tagProblemCounts.fundamental.map((e) => {
+                  if (e.tagName.length > 12) { 
+                    if (e.tagName.indexOf(" ") === -1) {
+                      return e.tagName.substr(0, 12);
+                    } else {
+                      return e.tagName.trim().split(' ').map(c => c.substr(0, 6)).join(' ')
+                    }
+                  }
+                  else return e.tagName
+                }),
                 dataLabels: {
                   enabled: false
                 },
                 stroke: {
                   // show: false,
                   width:1
+                },
+                title: {
+                  text: 'Fundamental -',
+                  align: 'left'
                 },
                 theme: {
                   monochrome: {
@@ -1057,7 +1132,7 @@ function Statslc(props) {
               }}
               series={skill.tagProblemCounts.fundamental.map((e) => e.problemsSolved)}
               type="pie"
-              width="130%"
+              width="100%"
             />
           </div>
         </div>
@@ -1070,6 +1145,10 @@ function Statslc(props) {
             
             <Chart
               options={{
+                chart: {
+                  redrawOnParentResize: true,
+                  redrawOnWindowResize: true,
+                },
                   theme: {
                     monochrome: {
                       enabled: true,
@@ -1106,8 +1185,7 @@ function Statslc(props) {
                 }
               ]}
               type="area"
-              height="100%"
-              width="130%"
+              width="100%"
             />
           </div>
           <div className="data">
@@ -1121,7 +1199,7 @@ function Statslc(props) {
         </div>
       </div>
       <div className="container">
-        <h3>Submissions (last 12 months) - </h3>
+        <h3>Submissions (last 6 months) - </h3>
         <div className="grid">
           <CalendarHeatmap
             startDate={moment(prior).format('YYYY-MM-DD')}
@@ -1145,7 +1223,7 @@ function Statslc(props) {
         </div>
       </div>
       <div className="container">
-        <h3>Latest Submission - </h3>
+        <h3>Latest Accepted Submissionns - </h3>
         <ul className='ul-submissions'>
           {submission.recentSubmissions.map(e => {
             if (e.statusDisplay === "Accepted") {
