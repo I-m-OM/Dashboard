@@ -124,7 +124,7 @@ function Codeforces() {
       .get(`https://codeforces.com/api/user.info?handles=${userName}&checkHistoricHandles=false`)
       .then((res) => {
           setUser(res.data.result[0])
-          setTimeout(() => {setReadyForRender(true)}, 4000)
+          setReadyForRender(true)
           // setReadyForRender(true)
       })
       .catch((e) => {

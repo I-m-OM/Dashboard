@@ -28,11 +28,8 @@ const Stat = styled.div`
 
       .graph {
         padding: 0;
+        display: block;
         width: 100%;
-        aspect-ratio: 16/16;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background: rgba(255, 255, 255, 0.8);
         border-radius: 1rem;
       }
@@ -88,11 +85,11 @@ const Stat = styled.div`
     }
 
     .problem {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 50% 50%;
     }
 
     .contest {
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 70% 30%;
     }
   }
     
@@ -106,11 +103,11 @@ const Stat = styled.div`
       }
 
       .problem {
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
       }
 
       .contest {
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
       }
     }
 
@@ -119,7 +116,7 @@ const Stat = styled.div`
 
 function Statslc(props) {
   const userName = props.user;
-  console.log(userName);
+  // console.log(userName);
   
   const [solve, setSolve] = useState({
     "solvedProblem": 555,
@@ -899,12 +896,9 @@ function Statslc(props) {
       .get(`https://alfa-leetcode-api.onrender.com/skillStats/${userName}`)
       .then((res) => {
         setSkill(res.data.data.matchedUser)
-        console.log("fetched skill")
-        console.log(skill)
       })
       .catch((e) => {
         console.log(e)
-        console.log(skill)
       });
     axios
       .get(`https://alfa-leetcode-api.onrender.com/languageStats?username=${userName}`)
@@ -972,6 +966,7 @@ function Statslc(props) {
               series={[{name: "Attempted", data: [solve.totalSubmissionNum[1].count, solve.totalSubmissionNum[2].count, solve.totalSubmissionNum[3].count],}, {name: "Solved", data: [solve.acSubmissionNum[1].count, solve.acSubmissionNum[2].count, solve.acSubmissionNum[3].count],}]}
               type="bar"
               width="100%"
+              height="400"
             />
           </div>
             
