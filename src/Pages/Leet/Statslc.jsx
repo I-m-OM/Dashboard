@@ -7,6 +7,9 @@ import Chart from "react-apexcharts";
 import CalendarHeatmap from 'react-calendar-heatmap';
 import 'react-calendar-heatmap/dist/styles.css';
 import moment from 'moment';
+import Button from '../../comp/Button';
+import { BiHome } from 'react-icons/bi';
+import { NavLink } from 'react-router-dom';
 
 const Stat = styled.div`
   width: 100%;
@@ -1171,9 +1174,7 @@ function Statslc(props) {
                   },
                   xaxis: {
                     labels: {
-                      formatter: function (value) {
-                        return value;
-                      }
+                      show: false,
                     }
                   }
                 }
@@ -1198,6 +1199,7 @@ function Statslc(props) {
           </div>
         </div>
       </div>
+
       <div className="container">
         <h3>Submissions (last 6 months) - </h3>
         <div className="grid">
@@ -1222,6 +1224,7 @@ function Statslc(props) {
           />
         </div>
       </div>
+
       <div className="container">
         <h3>Latest Accepted Submissionns - </h3>
         <ul className='ul-submissions'>
@@ -1231,7 +1234,24 @@ function Statslc(props) {
             }
           })}
         </ul>
+        <br /><br />
+        <center>
+          <NavLink to="/">
+            <Button
+              logo={<BiHome />}
+              lcolor="#eca72d"
+              data="back to"
+              data2="HOME"
+              bg="rgba(255, 255, 255, 0.3)"
+              color="#000"
+              color2="#eca72d"
+              border="#eca72d"
+            />
+          </NavLink>
+        </center>
       </div>
+      
+
     </Stat>
   )
 }

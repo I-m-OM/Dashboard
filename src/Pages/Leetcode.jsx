@@ -99,25 +99,7 @@ import Loading from '../comp/Loading'
 
 function Leetcode() {
   const userName = useLocation().state;
-  const [user, setUser] = useState({
-    "username": "I_m_OM",
-    "name": "Om Chaudhary",
-    "birthday": "11/16/2003",
-    "avatar": "https://assets.leetcode.com/users/I_m_OM/avatar_1708970139.png",
-    "ranking": 81154,
-    "reputation": 4,
-    "gitHub": "https://github.com/I-m-OM",
-    "twitter": "https://twitter.com/ImOM_1611",
-    "linkedIN": "https://linkedin.com/in/om-chaudhary-921a691b6",
-    "website": [
-        "om-chaudhary.netlify.app"
-    ],
-    "country": "India",
-    "company": null,
-    "school": null,
-    "skillTags": [],
-    "about": "I am a student of IIT Jammu, EE '26 batch. CP is my hobby."
-});
+  const [user, setUser] = useState();
   const [readyForRender, setReadyForRender] = useState(false);
   const [failed, setFailed] = useState(false);
 

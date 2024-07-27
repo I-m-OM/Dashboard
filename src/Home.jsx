@@ -36,12 +36,11 @@ import { NavLink } from "react-router-dom";
       display: flex;
       justify-content: center;
       margin: 5rem auto;
-      height: 10rem;
     }
 
     .info {
-      margin-top: 5rem;
       text-align: center;
+      font: 400 0.7rem arial;
     }
 
     @media only screen and (max-width: 700px) {
@@ -103,7 +102,8 @@ function Home() {
           />
         </NavLink>
       </div>
-      <div className="info">Designed & Developed by Om Chaudhary</div>
+      <div className="info">Credits(APIs) - CF : https://codeforces.com/apiHelp & LC : https://github.com/alfaarghya/alfa-leetcode-api <br />
+        Designed & Developed by Om Chaudhary</div>
     </Div>
   );
 }
