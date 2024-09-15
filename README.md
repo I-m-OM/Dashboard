@@ -20,7 +20,7 @@ With this platform, users can enter their usernames and view their coding stats 
 ## 🚀 **Demo**
 🔗 [Live Demo](https://dashboard-dsa.netlify.app/)  
 
-![Demo GIF](https://imgur.com/6zgSNmI)
+![Demo GIF](https://i.imgur.com/6zgSNmI_d.webp?maxwidth=1520&fidelity=grand)
 
 ---
 
@@ -69,8 +69,8 @@ To run this project locally:
 
 Here's a glimpse of how the data looks in the visualizer:
 
-![ApexCharts](https://imgur.com/5Y1lO6g)
-![ApexCharts](https://imgur.com/bsgwiOV)
+![Demo](https://i.imgur.com/5Y1lO6g_d.webp?maxwidth=460&fidelity=grand)
+![Demo](https://i.imgur.com/bsgwiOV_d.webp?maxwidth=460&fidelity=grand) 
 
 ---
 
