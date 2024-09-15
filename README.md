@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# 📊 **LeetCode & Codeforces Stats Visualizer**  
+![React](https://img.shields.io/badge/React-v17.0.2-blue?style=flat-square&logo=react)  
+![APIs](https://img.shields.io/badge/API-Integration-red?style=flat-square&logo=api)  
+![ApexCharts](https://img.shields.io/badge/ApexCharts-Graphs-green?style=flat-square&logo=chart)  
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🌐 **Overview**
+A **React.js** website that provides detailed visualizations of user stats from **LeetCode** and **Codeforces**.  
+With this platform, users can enter their usernames and view their coding stats like **solved problems**, **rank progression**, and **hidden metrics** in a single place. The data is displayed in interactive graphs and charts using **ApexCharts**, enhancing the user experience. All data is fetched from the respective **LeetCode** and **Codeforces** APIs.
 
-## Available Scripts
+### Key Features:
+- 📊 **Visualize LeetCode & Codeforces Data:** Get user-specific data and metrics at a glance.
+- ⚡ **Interactive Graphs:** Easy-to-read, dynamic graphs built with **ApexCharts**.
+- 🔍 **Hidden Metrics:** Explore stats that are not directly available on LeetCode/Codeforces.
+- 🚀 **React.js Frontend:** Fast and responsive website built using the power of **React.js**.
+- 🔗 **API Integration:** Fetch live data using the public APIs of **LeetCode** and **Codeforces**.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 **Demo**
+🔗 [Live Demo](https://dashboard-dsa.netlify.app/)  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Demo GIF](https://imgur.com/6zgSNmI)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠 **Tech Stack**
+![React](https://img.shields.io/badge/Frontend-React-blue?style=flat-square&logo=react)  
+![APIs](https://img.shields.io/badge/API-LeetCode%20%26%20Codeforces-red?style=flat-square)  
+![ApexCharts](https://img.shields.io/badge/Graphs-ApexCharts-green?style=flat-square&logo=chart)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend:** React.js
+- **Charts & Graphs:** ApexCharts.js
+- **API Integration:** Fetching data from LeetCode & Codeforces APIs
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📦 **Installation**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run this project locally:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/yourusername/yourprojectname.git
 
-### `npm run eject`
+2. Navigate to the project directory:
+   ```bash
+   cd yourprojectname
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install dependencies
+   ```bash
+   npm install
+   
+4. Start the development server
+   ```bash
+   npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🖥️ **Usage**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Visit the website.
+2. Enter a valid **LeetCode** or **Codeforces** username in the input field.
+3. View the user’s data visualized in beautiful charts!
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📈 **Sample Graphs**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Here's a glimpse of how the data looks in the visualizer:
 
-### Code Splitting
+![ApexCharts](https://imgur.com/5Y1lO6g)
+![ApexCharts](https://imgur.com/bsgwiOV)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🧑‍💻 **Contributing**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contributions are welcome! To contribute:
 
-### Making a Progressive Web App
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📄 **License**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📞 **Contact**
 
-### `npm run build` fails to minify
+If you have any questions or feedback, feel free to reach out:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Email: im.om.chaudhary@gmail.com
